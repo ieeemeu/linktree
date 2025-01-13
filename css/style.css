@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+:root {
+    --body-bg-color: #0D0D0D;
+    --purple: #BB99DD;
+    --link-hover: #FFD700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+    background: var(--body-bg-color);
+    overflow: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, #000428, #004e92);
+    animation: backgroundMove 15s infinite;
+}
+
+@keyframes backgroundMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tree-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.tree-container .avatar {
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--purple);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.tree-container .avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.tree-container .insta-user {
+    margin-top: 10px;
+    color: var(--purple);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.links-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.links-container .link {
+    padding: 12px 20px;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+    color: var(--purple);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.links-container .link:hover {
+    background: var(--purple);
+    color: var(--link-hover);
+    cursor: pointer;
+}
+
+.socials-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.socials-container .social img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.socials-container .social:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
